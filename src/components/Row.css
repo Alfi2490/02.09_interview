@@ -1,0 +1,80 @@
+.Row {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    border: 1px solid black;
+    padding: 5px;
+    position: relative;
+    height: 170.33px;
+    border-radius: 20px;
+    background-color: skyblue;
+}
+
+.Row .Title {
+    width: 40%;
+    margin-left: 20px;
+}
+
+.Year {
+    margin-left: 50px;
+    width: 20%;
+}
+
+.Type {
+    margin-left: 50px;
+}
+
+.Row img {
+    width: 100px;
+    margin-left: auto;
+    margin-right: 10px;
+    box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.5);
+}
+
+.Row img:hover {
+    position: absolute;
+    right: 15px;
+    width: 300px;
+    z-index: 1;
+    animation-name: size;
+    animation-duration: 0.5s;
+    cursor: pointer;
+    box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.5);
+}
+
+@keyframes size {
+    from {width: 100px;}
+    to {width: 300px;}
+  }
+
+.BigRow {
+    background-color: skyblue;
+    border-radius: 20px;
+    margin-top: 20px;
+    padding: 15px;
+}
+
+.BigRow img {
+    margin-bottom: 20px;
+    box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.5);
+}
+
+.BigRow .Title {
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.BigRow .Released {
+    margin-bottom: 10px;
+}
+
+.BigRow .Runtime {
+    margin-bottom: 20px;
+}
+
+.BigRow .Plot {
+    background-color: rgba(34, 60, 80, 0.2);
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.5);
+}

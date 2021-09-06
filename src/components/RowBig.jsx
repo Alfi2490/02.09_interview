@@ -1,8 +1,11 @@
+
+
 function RowBig(props) {
 
     const film = props.film;
 
     return <>
+        <div className="Error">{props.error}</div>
         <img src={film.Poster} alt="Poster" />
         <div className="Title">{film.Title}</div>
         <div className="Released">Release year: {film.Released}</div>

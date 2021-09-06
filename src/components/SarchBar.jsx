@@ -1,4 +1,4 @@
-import buttonStyle from './style';
+import style from './style';
 
 function SearchBar(props) {   
 
@@ -11,19 +11,25 @@ function SearchBar(props) {
             value={props.searchText}
             onChange={e => props.onSearchChange(e.target.value)} />
 
-        <button style={buttonStyle} onClick={e => {
-            e.preventDefault();
-            props.onSortFilm('A');
+        <button 
+            style={style.button} 
+            onClick={e => {
+                e.preventDefault();
+                props.onSortFilm('A');
             }}>A - Z</button>
 
-        <button style={buttonStyle} onClick={e => {
-            e.preventDefault();
-            props.onSortFilm('Z');
+        <button 
+            style={style.button} 
+            onClick={e => {
+                e.preventDefault();
+                props.onSortFilm('Z');
             }}>Z - A</button>
         
-        <button style={buttonStyle} onClick={e => {
-            e.preventDefault();
-            props.onSortFilm('Y');
+        <button 
+            style={style.button} 
+            onClick={e => {
+                e.preventDefault();
+                props.onSortFilm('Y');
             }}>Year</button>
 
     </form>

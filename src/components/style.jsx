@@ -1,4 +1,6 @@
 const button = {marginLeft: '10px', backgroundColor: 'skyblue'};
-export const pagesStyle = {color:'skyblue', marginTop:'20px'}
+const pages = {color:'skyblue', marginTop:'20px'}
 
-export default button;
+const style = { button, pages };
+
+export default style;

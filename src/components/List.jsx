@@ -1,5 +1,5 @@
 import Row from "./Row";
-import {pagesStyle} from './style';
+import style from './style';
 
 function List(props) {
 
@@ -19,7 +19,7 @@ function List(props) {
     let films = props.films.slice(props.count - 3, props.count);
 
     return <div>
-        <div style={pagesStyle}>Pages {pages}</div>
+        <div style={style.pages}>Pages {pages}</div>
         {films.map(film => <Row 
             key={film.imdbID}
             id={film.imdbID} 

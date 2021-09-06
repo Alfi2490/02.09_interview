@@ -1,4 +1,4 @@
-async function getFilms(search, type,  setInfo) {
+async function getFilms(search, type,  setInfo, setError) {
 
     const URL = `http://www.omdbapi.com/?apikey=7c11b80d&${type}=${search}`
 
@@ -6,11 +6,15 @@ async function getFilms(search, type,  setInfo) {
     const result = await response.json();
     
     if(type === 's') {
-        setInfo(result.Search);
+        setError('');
+        result.Search && setInfo(result.Search);
+        result.Error && setError(result.Error);
     };
 
     if(type === 'i') {
+        setError('');
         setInfo(result);
+        result.Error && setError(result.Error);
     }
 };
 

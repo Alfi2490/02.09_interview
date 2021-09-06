@@ -22,11 +22,13 @@ function List(props) {
         <div style={style.pages}>Pages {pages}</div>
         {films.map(film => <Row 
             key={film.imdbID}
+            favorites={props.favorites}
             id={film.imdbID} 
             title={film.Title} 
             year={film.Year} 
             type={film.Type} 
-            poster={film.Poster} />)}
+            poster={film.Poster}
+            onChangeFavorites={props.onChangeFavorites} />)}
     </div>
 }
 export default List;

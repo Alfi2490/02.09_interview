@@ -1,4 +1,5 @@
 import style from './style';
+import ls from './localStorage';
 
 function SearchBar(props) {   
 
@@ -31,6 +32,14 @@ function SearchBar(props) {
                 e.preventDefault();
                 props.onSortFilm('Y');
             }}>Year</button>
+
+        <button 
+            style={style.button} 
+            onClick={e => {
+                e.preventDefault();
+                ls.initFavorite();
+                props.onChangeFavorites([]);
+            }}>Clear favorites</button>
 
     </form>
 }
